@@ -268,8 +268,11 @@ main #btn:hover {
 .sec .content .text-content {
   margin-left: -1rem;
   padding: 1rem;
-  -webkit-backdrop-filter: blur(105px) opacity(20%);
-          backdrop-filter: blur(105px) opacity(20%);
+  border-left: 2px solid white;
+  -webkit-backdrop-filter: blur(200px) opacity(20%);
+          backdrop-filter: blur(200px) opacity(20%);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
 }
 
 .sec #about-photo-container {
