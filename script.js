@@ -43,7 +43,7 @@ const myTags = [
 
 var tagCloud = TagCloud('.content', myTags, {
 
-    radius: 160,
+    radius: 250,
     maxSpeed: 'slow',
     initSpeed: 'slow',
     direction: 135,
@@ -54,7 +54,7 @@ mybutton = document.getElementById("myBtn");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";

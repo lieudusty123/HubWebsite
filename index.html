@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./sprites/thumbnail.jpg" type="image/x-icon">
+    <title>Omer Ezra</title>
 </head>
 
 <body>
@@ -27,26 +28,47 @@
         <img src="./sprites/moon.png" id="moon" />
         <img src="./sprites/mountains_behind.png" id="mountains_behind" />
         <h2 id="text">Omer Ezra</h2>
-        <a href="#sec" id="btn" name="Hover">Explore</a>
+        <a href="#about" id="btn" name="Hover">Explore</a>
         <img src="./sprites/mountains_front.png" id="mountains_front" />
     </main>
     <section class="sec" id="about">
-        <h2>About</h2>
+        <h2 class="section-title">ABOUT</h2>
         <div class="content">
-            <p>Junior front-end developer. Learned and practiced front-end for 2 years. I make up for what I lack in
-                work
-                experience with a passion for the job and my work experience as a video editor in the IDF.
+            <div class="text-content">
+                <p>
+                    Junior front-end developer. Learned and practiced front-end for 2 years. I make up for what I lack
+                    in
+                    work
+                    experience with a passion for the job and my work experience as a video editor in the IDF.
 
-                While in the IDF, I worked with very harsh deadlines, changing environments, worked alone and as a part
-                of a
-                team, and with clients from all over the world, ranks, and positions (soldiers, commanders, politicians,
-                and
-                governments).
-            </p>
+                    While in the IDF, I worked with very harsh deadlines, changing environments, worked alone and as a
+                    part
+                    of a
+                    team, and with clients from all over the world, ranks, and positions (soldiers, commanders,
+                    politicians,
+                    and
+                    governments).
+                </p>
+                <br />
+                <p>
+                    Since my first one-line HTML file, I knew that's what I
+                    wanted to do. Passing forward two years, I learned the skills
+                    need to finally develop and maintain actual websites. I saw how my past
+                    as a professional video editor helped me improve as a front-end developer.
+                </p>
+                <br />
+                <p>
+                    <b id="this">Available For Hire!</b> - I'm always looking to learn, explore and develop as a
+                    front-end
+                    developer and as a way of life. If you think I fit your requirements, I would love to hear from
+                    you.
+                </p>
+            </div>
+
         </div>
     </section>
     <section id="contact">
-        <h2 id="form-title">Contact</h2>
+        <h2 id="form-title" class="section-title">CONTACT</h2>
         <form action="https://formspree.io/f/mpznzlkn" method="POST" id="my-form">
             <h4>Personal</h4>
             <label>Name:</label>
@@ -64,7 +86,9 @@
     </section>
 
     <!-- jump to top button -->
-    <button id="myBtn">Top 🢁</button>
+    <button id="myBtn">
+        <div>🢁</div>
+    </button>
 
     <!-- footer -->
     <footer>Made by Omer Ezra 2022 &copy;</footer>

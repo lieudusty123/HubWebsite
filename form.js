@@ -1,3 +1,5 @@
+// sends form with formspree API
+
 var form = document.getElementById("my-form");
 async function handleSubmit(event) {
     event.preventDefault();
@@ -28,14 +30,19 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit)
 
+
+
+
+// Handles moving stars and mountains in contact section
+
 const contactSection = document.querySelector('#contact')
 window.addEventListener('scroll', () => {
-    const elDistanceToTop = window.pageYOffset + contactSection.getBoundingClientRect().top;
-    let value = elDistanceToTop - window.scrollY;
-    // console.log(window.pageYOffset)
-    // console.log(contactSection.style)
-    // console.log(elDistanceToTop)
-    console.log(`${value}px 0px 0px`)
-    contactSection.style.backgroundPositionY = `${value}px, ${value / 4}px, 0px`
-    contactSection.style.backgroundPositionX = `auto, -${value / 4}px, 0px`
+
+    const elDistanceStars = window.pageYOffset + contactSection.getBoundingClientRect().top;
+    let valueStars = elDistanceStars - window.scrollY;
+
+    const elDistanceMountains = window.pageYOffset + contactSection.getBoundingClientRect().bottom;
+    let valueMountains = elDistanceMountains - window.scrollY;
+    contactSection.style.backgroundPositionY = `${valueStars}px, ${valueStars / 4}px, 0px`
+    contactSection.style.backgroundPositionX = valueMountains >= 0 ? `50vh, -${valueMountains / 2}px, 0px` : `50vh, ${valueMountains / 2}px, 0px`
 })
