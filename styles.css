@@ -209,11 +209,49 @@ main #btn:hover {
   position: relative;
   padding: 100px;
   background: #1c0522;
+  background: url(./sprites/Untitled-1.png);
+  background-size: cover;
+}
+
+.sec .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sec #about-photo-container {
+  width: 20vw;
+  height: 70vh;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+
+.sec #about-photo-container img {
+  position: relative;
+  right: 20rem;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.sec p {
+  width: 40vw;
 }
 
 .sec h2 {
   font-size: 3.5rem;
-  margin-bottom: 10px;
+  margin-bottom: -3rem;
   color: white;
 }
 
@@ -225,11 +263,149 @@ main #btn:hover {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 650;
-  margin-left: 30%;
+  color: white;
+  pointer-events: none;
+}
+
+#contact {
+  overflow: hidden;
+  position: relative;
+  padding: 100px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(./sprites/mountains_behind.png) no-repeat 50vh, url(./sprites/stars.png), -webkit-gradient(linear, left top, left bottom, from(#210c42), to(#26305e));
+  background: url(./sprites/mountains_behind.png) no-repeat 50vh, url(./sprites/stars.png), linear-gradient(#210c42, #26305e);
+}
+
+#contact form {
+  border: 2px solid white;
+  color: white;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  width: 30rem;
+  min-height: auto;
+  z-index: 10;
+  padding: 2rem;
+}
+
+#contact form label {
+  display: block;
+}
+
+#contact form hr {
+  opacity: 0.7;
+  margin: 0 auto;
+  width: 75%;
+}
+
+#contact form h4 {
+  font-size: 1.4rem;
+  margin-block: 1rem;
+}
+
+#contact form input {
+  width: 100%;
+  height: 3rem;
+  padding-inline: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+#contact form input:focus {
+  outline: none;
+}
+
+#contact form #messageInput {
+  height: 6rem;
+  width: 100%;
+  padding-block: .5rem;
+  padding-inline: 1rem;
+  margin-bottom: 1rem;
+  resize: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+#contact form #messageInput:focus {
+  outline: none;
+}
+
+#contact form #my-form-button {
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  background-color: rgba(255, 219, 12, 0.973);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#contact form #my-form-button:hover {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-color: rgba(242, 206, 0, 0.973);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#contact form #my-form-button:active {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-color: rgba(216, 184, 0, 0.973);
+  -webkit-box-shadow: 7px 7px 0px 0px black;
+          box-shadow: 7px 7px 0px 0px black;
+}
+
+#contact #form-title {
+  white-space: nowrap;
+  color: white;
+  font-size: 4rem;
+}
+
+footer {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1rem;
+  background-color: #12121a;
   color: white;
 }
 
-.sec .tagcloud--item:hover {
-  color: #36454F;
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 13px;
+  padding-inline: 25px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  background-color: #111;
+  /* Add a dark-grey background on hover */
 }
 /*# sourceMappingURL=styles.css.map */

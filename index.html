@@ -10,16 +10,19 @@
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <div class='logo' href="Logo">Logo</div>
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#main" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
-    <main>
+
+    <!-- sections -->
+    <main id="main">
         <img src="./sprites/stars.png" id="stars" />
         <img src="./sprites/moon.png" id="moon" />
         <img src="./sprites/mountains_behind.png" id="mountains_behind" />
@@ -27,71 +30,51 @@
         <a href="#sec" id="btn" name="Hover">Explore</a>
         <img src="./sprites/mountains_front.png" id="mountains_front" />
     </main>
-    <section class="sec" id="sec">
-        <h2>Parallax Scrolling Effects</h2>
-        <span class="content"></span>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum non, necessitatibus quam officia est dolorem,
-            reiciendis, obcaecati ad pariatur tempore vel libero hic harum assumenda nisi delectus dolorum fugiat.
-            Alias.
-            Neque vero vitae reiciendis suscipit. Aut placeat similique, mollitia quisquam officiis labore soluta rerum
-            id accusantium illum nemo praesentium corporis dolorum nisi incidunt ex dicta sapiente ab asperiores atque
-            ea!
-        </p>
-        <br />
-        <p>
-            Modi hic iusto quam excepturi blanditiis aliquam suscipit corporis omnis voluptates perspiciatis
-            voluptatibus quos in, nesciunt illum dignissimos. Voluptatum ab ipsum, voluptas nam reiciendis cum itaque
-            inventore vero quisquam autem.
-            Impedit quidem obcaecati ad quaerat, velit voluptatum odit ipsum ipsam laborum iure quasi ab quibusdam
-            tenetur amet quis accusamus et sint doloribus quam repellendus perspiciatis. Minus id quo magnam fuga?
-        </p>
-        <br />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem obcaecati autem reiciendis
-            suscipit unde excepturi ducimus omnis fugiat earum culpa inventore quisquam, magni, voluptate hic totam
-            nihil blanditiis illum?
-            Commodi adipisci, numquam ea excepturi ut quasi sit sequi dolorem totam consequatur eos ex natus odit quidem
-            unde. Nostrum eius magnam assumenda obcaecati corrupti vel aut possimus ab neque saepe?
-        </p>
-        <br />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum non, necessitatibus quam officia est dolorem,
-            reiciendis, obcaecati ad pariatur tempore vel libero hic harum assumenda nisi delectus dolorum fugiat.
-            Alias.
-            Neque vero vitae reiciendis suscipit. Aut placeat similique, mollitia quisquam officiis labore soluta rerum
-            id accusantium illum nemo praesentium corporis dolorum nisi incidunt ex dicta sapiente ab asperiores atque
-            ea!
-        </p>
-        <br />
-        <p>
-            Modi hic iusto quam excepturi blanditiis aliquam suscipit corporis omnis voluptates perspiciatis
-            voluptatibus quos in, nesciunt illum dignissimos. Voluptatum ab ipsum, voluptas nam reiciendis cum itaque
-            inventore vero quisquam autem.
-            Impedit quidem obcaecati ad quaerat, velit voluptatum odit ipsum ipsam laborum iure quasi ab quibusdam
-            tenetur amet quis accusamus et sint doloribus quam repellendus perspiciatis. Minus id quo magnam fuga?
-        </p>
-        <br />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem obcaecati autem reiciendis
-            suscipit unde excepturi ducimus omnis fugiat earum culpa inventore quisquam, magni, voluptate hic totam
-            nihil blanditiis illum?
-        </p>
+    <section class="sec" id="about">
+        <h2>About</h2>
+        <div class="content">
+            <p>Junior front-end developer. Learned and practiced front-end for 2 years. I make up for what I lack in
+                work
+                experience with a passion for the job and my work experience as a video editor in the IDF.
+
+                While in the IDF, I worked with very harsh deadlines, changing environments, worked alone and as a part
+                of a
+                team, and with clients from all over the world, ranks, and positions (soldiers, commanders, politicians,
+                and
+                governments).
+            </p>
+        </div>
     </section>
-    <section id="form-section">
-        <form action="https://formspree.io/f/mpznzlkn" method="POST">
-            <label>
-                Your email:
-                <input type="email" name="email">
-            </label>
-            <label>
-                Your message:
-                <textarea name="message"></textarea>
-            </label>
-            <!-- your other form fields go here -->
-            <button type="submit">Send</button>
+    <section id="contact">
+        <h2 id="form-title">Contact</h2>
+        <form action="https://formspree.io/f/mpznzlkn" method="POST" id="my-form">
+            <h4>Personal</h4>
+            <label>Name:</label>
+            <input type="text" name="name" required />
+            <label>Email:</label>
+            <input type="email" name="email" required />
+            <h4>Contact</h4>
+            <label>Subject:</label>
+            <input type="text" name="subject" required />
+            <label>Message:</label>
+            <textarea type="text" name="message" id="messageInput" required></textarea>
+            <button id="my-form-button">Submit</button>
+            <p id="my-form-status"></p>
         </form>
     </section>
+
+    <!-- jump to top button -->
+    <button id="myBtn">Top 🢁</button>
+
+    <!-- footer -->
+    <footer>Made by Omer Ezra 2022 &copy;</footer>
+
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 
     <script src="./script.js"></script>
+    <script src="./form.js"></script>
 </body>
 
 </html>
