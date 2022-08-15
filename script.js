@@ -53,11 +53,27 @@ var tagCloud = TagCloud('.content', myTags, {
 mybutton = document.getElementById("myBtn");
 window.onscroll = function () { scrollFunction() };
 
+
+const main = document.querySelector('main')
+const about = document.querySelector('#about')
+const contact = document.querySelector('#contact')
+
+let sectionsArr = [main.getBoundingClientRect().top, about.getBoundingClientRect().top, contact.getBoundingClientRect().top, 200000]
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
+    }
+
+    if (window.scrollY > 0 && window.scrollY + 200 < sectionsArr[1]) {
+        console.log('main')
+    }
+    else if (window.scrollY - 100 < sectionsArr[2]) {
+        console.log('about')
+    }
+    else if (window.scrollY - 100 < sectionsArr[3]) {
+        console.log('contact')
     }
 }
 function topFunction() {
@@ -69,3 +85,6 @@ mybutton.addEventListener('click', () => {
     topFunction()
 })
 
+
+
+// contactSection.getBoundingClientRect().top

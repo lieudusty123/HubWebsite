@@ -15,10 +15,10 @@
     <header>
         <div class='logo' href="Logo">Logo</div>
         <ul>
-            <li><a href="#main" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#main" class="active" id="home-button">Home</a></li>
+            <li><a href="#about" id="about-button">About</a></li>
+            <li><a href="#" id="work-button">Work</a></li>
+            <li><a href="#contact" id="contact-button">Contact</a></li>
         </ul>
     </header>
 
@@ -31,6 +31,8 @@
         <a href="#about" id="btn" name="Hover">Explore</a>
         <img src="./sprites/mountains_front.png" id="mountains_front" />
     </main>
+
+
     <section class="sec" id="about">
         <h2 class="section-title">ABOUT</h2>
         <div class="content">
@@ -67,6 +69,47 @@
 
         </div>
     </section>
+
+
+    <section id="work">
+        <div class="change-image" id="left">
+            <img src="./sprites/arrow.png" />
+        </div>
+        <div class="change-image" id="right">
+            <img src="./sprites/arrow.png" />
+        </div>
+        <ul id="work-ul">
+            <li class="work-li active">
+                <a href="https://omerweat.netlify.app/">
+                    <img src='./sprites/recipeWebsite.png' class="recipeWebsite" />
+                </a>
+                <div class="work-image-footer">
+                    Dynamic recipe website. Built with the help of an online free recipe API.
+                    (since this website uses a free API, please limit your entries to 10 per minute)
+                </div>
+            </li>
+            <li class="work-li">
+                <a href="https://omertodo.netlify.app/">
+                    <img src='./sprites/todoWebsite.png' class="todoWebsite" />
+                </a>
+                <div class="work-image-footer">
+                    To-Do list web application made with ReactJS.
+                </div>
+            </li>
+            <li class="work-li">
+                <a href="https://omerwordle.netlify.app/">
+                    <img src='./sprites/wordleWebsite.png' class="wordleWebsite" />
+                </a>
+                <div class="work-image-footer">
+                    You have five chances to guess a five-letter word.
+                    With each guess, the game tells you which letters
+                    are correct, in the wrong spots, or not in the word at all.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
     <section id="contact">
         <h2 id="form-title" class="section-title">CONTACT</h2>
         <form action="https://formspree.io/f/mpznzlkn" method="POST" id="my-form">
@@ -97,8 +140,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 
+
     <script src="./script.js"></script>
     <script src="./form.js"></script>
+    <script src="./workTransition.js"></script>
 </body>
 
 </html>
