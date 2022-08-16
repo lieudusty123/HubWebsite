@@ -13,12 +13,12 @@
 <body>
     <!-- header -->
     <header>
-        <div class='logo' href="Logo">Logo</div>
+        <div class='logo' href="Logo"></div>
         <ul>
-            <li><a href="#main" class="active" id="home-button">Home</a></li>
-            <li><a href="#about" id="about-button">About</a></li>
-            <li><a href="#" id="work-button">Work</a></li>
-            <li><a href="#contact" id="contact-button">Contact</a></li>
+            <li><a href="#main" class="nav-button" id="home-button">Home</a></li>
+            <li><a href="#about" class="nav-button" id="about-button">About</a></li>
+            <li><a href="#work" class="nav-button" id="work-button">Work</a></li>
+            <li><a href="#contact" class="nav-button" id="contact-button">Contact</a></li>
         </ul>
     </header>
 
@@ -60,7 +60,8 @@
                 </p>
                 <br />
                 <p>
-                    <b id="this">Available For Hire!</b> - I'm always looking to learn, explore and develop as a
+                    <b id="highlight-text">Available For Hire!</b> - I'm always looking to learn, explore and develop as
+                    a
                     front-end
                     developer and as a way of life. If you think I fit your requirements, I would love to hear from
                     you.
@@ -72,41 +73,61 @@
 
 
     <section id="work">
-        <div class="change-image" id="left">
-            <img src="./sprites/arrow.png" />
+        <div id="work-title-container">
+            <h2 id="work-title" class="section-title">WORK</h2>
         </div>
-        <div class="change-image" id="right">
-            <img src="./sprites/arrow.png" />
+        <div id="wrapper">
+            <div id="slider-wrap">
+                <ul id="slider">
+                    <li>
+                        <div>
+                            <a href="https://omerweat.netlify.app/">
+                                <img src='./sprites/recipeWebsite.png' class="recipeWebsite" />
+                            </a>
+                        </div>
+                        <div class="work-image-footer">
+                            Dynamic recipe website. Built with the help of an online free recipe API.
+                            (since this website uses a free API, please limit your entries to 10 per minute)
+                        </div>
+                        <i class="fa fa-image"></i>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="https://omertodo.netlify.app/">
+                                <img src='./sprites/todoWebsite.png' class="todoWebsite" />
+                            </a>
+                        </div>
+                        <div class="work-image-footer">
+                            To-Do list web application made with ReactJS.
+                        </div>
+                        <i class="fa fa-gears"></i>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="https://omerwordle.netlify.app/">
+                                <img src='./sprites/wordleWebsite.png' class="wordleWebsite" />
+                            </a>
+                        </div>
+                        <div class="work-image-footer">
+                            You have five chances to guess a five-letter word.
+                            With each guess, the game tells you which letters
+                            are correct, in the wrong spots, or not in the word at all.
+                        </div>
+                        <i class="fa fa-sliders"></i>
+                    </li>
+                </ul>
+
+                <!--controls-->
+                <div class="btns" id="next"><img src="./sprites/arrow.png" id="left-arrow-button" /></div>
+                <div class="btns" id="previous"><img src="./sprites/arrow.png" id="right-arrow-button" /></div>
+                <div id="counter"></div>
+                <!--controls-->
+
+            </div>
+
         </div>
-        <ul id="work-ul">
-            <li class="work-li active">
-                <a href="https://omerweat.netlify.app/">
-                    <img src='./sprites/recipeWebsite.png' class="recipeWebsite" />
-                </a>
-                <div class="work-image-footer">
-                    Dynamic recipe website. Built with the help of an online free recipe API.
-                    (since this website uses a free API, please limit your entries to 10 per minute)
-                </div>
-            </li>
-            <li class="work-li">
-                <a href="https://omertodo.netlify.app/">
-                    <img src='./sprites/todoWebsite.png' class="todoWebsite" />
-                </a>
-                <div class="work-image-footer">
-                    To-Do list web application made with ReactJS.
-                </div>
-            </li>
-            <li class="work-li">
-                <a href="https://omerwordle.netlify.app/">
-                    <img src='./sprites/wordleWebsite.png' class="wordleWebsite" />
-                </a>
-                <div class="work-image-footer">
-                    You have five chances to guess a five-letter word.
-                    With each guess, the game tells you which letters
-                    are correct, in the wrong spots, or not in the word at all.
-                </div>
-            </li>
-        </ul>
     </section>
 
 

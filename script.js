@@ -40,41 +40,67 @@ const myTags = [
     'React Router', 'Redux', 'git',
     'ES6', 'SASS',
 ];
+if (window.innerWidth > 700) {
 
-var tagCloud = TagCloud('.content', myTags, {
+    var tagCloud = TagCloud('.content', myTags, {
 
-    radius: 250,
-    maxSpeed: 'slow',
-    initSpeed: 'slow',
-    direction: 135,
-    keep: true
+        radius: 200,
+        maxSpeed: 'slow',
+        initSpeed: 'slow',
+        direction: 135,
+        keep: true
 
-});
+    });
+}
+
 mybutton = document.getElementById("myBtn");
 window.onscroll = function () { scrollFunction() };
 
 
 const main = document.querySelector('main')
 const about = document.querySelector('#about')
+const work = document.querySelector('#work')
 const contact = document.querySelector('#contact')
+const footer = document.querySelector('footer')
 
-let sectionsArr = [main.getBoundingClientRect().top, about.getBoundingClientRect().top, contact.getBoundingClientRect().top, 200000]
+const navBtns = document.querySelectorAll('.nav-button')
+let btnArr = [...navBtns]
+let sectionsArr = [main, about, work, contact]
+
+function activeButtonsOnScroll() {
+    if (window.scrollY > 0 && window.scrollY < sectionsArr[1].offsetTop) {
+        btnArr.forEach(button => {
+            if (btnArr[0] == button) { button.classList.add('active') }
+            else { button.classList.remove('active') }
+        })
+    }
+    else if (window.scrollY > sectionsArr[1].offsetTop && window.scrollY < sectionsArr[2].offsetTop) {
+        btnArr.forEach(button => {
+            if (btnArr[1] == button) { button.classList.add('active') }
+            else { button.classList.remove('active') }
+        })
+    }
+    else if (window.scrollY > sectionsArr[2].offsetTop && window.scrollY < sectionsArr[3].offsetTop) {
+        btnArr.forEach(button => {
+            if (btnArr[2] == button) { button.classList.add('active') }
+            else { button.classList.remove('active') }
+        })
+    }
+    else if (window.scrollY > sectionsArr[3].offsetTop) {
+        btnArr.forEach(button => {
+            if (btnArr[3] == button) { button.classList.add('active') }
+            else { button.classList.remove('active') }
+        })
+    }
+}
+
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
     }
-
-    if (window.scrollY > 0 && window.scrollY + 200 < sectionsArr[1]) {
-        console.log('main')
-    }
-    else if (window.scrollY - 100 < sectionsArr[2]) {
-        console.log('about')
-    }
-    else if (window.scrollY - 100 < sectionsArr[3]) {
-        console.log('contact')
-    }
+    activeButtonsOnScroll()
 }
 function topFunction() {
     document.body.scrollTop = 0;
@@ -85,6 +111,3 @@ mybutton.addEventListener('click', () => {
     topFunction()
 })
 
-
-
-// contactSection.getBoundingClientRect().top

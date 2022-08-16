@@ -1,0 +1,146 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .sec {
+        @include flex-col();
+
+        .content {
+            margin-block: 1rem;
+            width: 90%;
+            @include flex-col();
+
+            .text-content {
+                @include flex-col();
+                width: 100%;
+                margin: 0 auto;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #work-title-container {
+        @include flex-col();
+    }
+
+    #contact {
+        @include flex-col();
+        padding-top: 1rem;
+        padding: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        ul {
+            display: none !important;
+        }
+    }
+
+    #text {
+        font-size: 10vw;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .sec {
+        @include flex-col();
+
+        .content {
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            width: 90%;
+            @include flex-col();
+
+            .text-content {
+                padding: 1rem;
+                @include flex-col();
+                width: 100%;
+                margin: 0 auto;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .work-image-footer {
+        height: auto;
+        padding-inline: 0.5rem;
+    }
+
+    #contact {
+        padding: 0;
+        padding-block: 5rem;
+    }
+
+    #my-form {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    header {
+        display: block;
+    }
+
+    main {
+        img {
+            top: 0;
+        }
+    }
+
+    #text {
+        font-size: 6vw;
+    }
+
+    .sec {
+        padding: 100px;
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-block: 1rem;
+
+
+            .text-content {
+                padding: 1rem;
+                margin-left: -1rem;
+            }
+        }
+    }
+
+    .work-image-footer {
+        padding: 1rem;
+        padding-inline: 2rem;
+        font-size: 21px;
+        height: 6rem;
+    }
+
+    .section-title {
+        font-size: 4rem;
+    }
+
+    #contact {
+        padding: 100px;
+    }
+
+    #my-form {
+        width: 30rem;
+    }
+
+}
