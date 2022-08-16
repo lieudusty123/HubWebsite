@@ -54,6 +54,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0;
   }
   #contact {
     display: -webkit-box;
@@ -126,7 +127,10 @@
   .sec .content .text-content p {
     width: 100%;
   }
-  .work-image-footer {
+  #work #work-title-container {
+    padding-block: 2rem;
+  }
+  #work #work-title-container .work-image-footer {
     height: auto;
     padding-inline: 0.5rem;
   }
@@ -174,7 +178,11 @@
     padding: 1rem;
     margin-left: -1rem;
   }
-  .work-image-footer {
+  #work #work-title-container {
+    padding-left: 100px;
+    padding-block: 50px;
+  }
+  #work #work-title-container .work-image-footer {
     padding: 1rem;
     padding-inline: 2rem;
     font-size: 21px;
@@ -610,7 +618,6 @@ footer {
 }
 
 #myBtn {
-  display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -629,12 +636,19 @@ footer {
   transition: all .2s;
 }
 
+#myBtn img {
+  margin-top: 10%;
+  width: 50%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 #myBtn:hover {
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.603);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.603);
 }
 
-#myBtn:hover div {
+#myBtn:hover img {
   -webkit-transition: color 1s;
   transition: color 1s;
   -webkit-animation: jumpToTop 1.5s infinite;
@@ -694,8 +708,6 @@ footer {
   background: linear-gradient(90deg, #353535 0%, #252525 40%);
   border: 2px solid gold;
   border-right: 3px solid gold;
-  padding: 100px;
-  padding-bottom: 100px;
 }
 
 #wrapper {

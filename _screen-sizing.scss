@@ -28,6 +28,7 @@
 
     #work-title-container {
         @include flex-col();
+        padding: 0;
     }
 
     #contact {
@@ -74,10 +75,18 @@
         }
     }
 
-    .work-image-footer {
-        height: auto;
-        padding-inline: 0.5rem;
+    #work {
+        #work-title-container {
+            padding-block: 2rem;
+
+            .work-image-footer {
+                height: auto;
+                padding-inline: 0.5rem;
+            }
+        }
     }
+
+
 
     #contact {
         padding: 0;
@@ -124,12 +133,20 @@
         }
     }
 
-    .work-image-footer {
-        padding: 1rem;
-        padding-inline: 2rem;
-        font-size: 21px;
-        height: 6rem;
+    #work {
+        #work-title-container {
+            padding-left: 100px;
+            padding-block: 50px;
+
+            .work-image-footer {
+                padding: 1rem;
+                padding-inline: 2rem;
+                font-size: 21px;
+                height: 6rem;
+            }
+        }
     }
+
 
     .section-title {
         font-size: 4rem;
