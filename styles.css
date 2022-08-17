@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1099px) {
+  #text {
+    font-size: 60px;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
   .sec {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11,6 +17,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .sec .section-title {
+    margin-inline: 100px;
+    margin-block: 50px;
   }
   .sec .content {
     margin-block: 1rem;
@@ -39,6 +49,7 @@
             align-items: center;
     width: 100%;
     margin: 0 auto;
+    padding: 1rem;
   }
   .sec .content .text-content p {
     width: 100%;
@@ -54,7 +65,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0;
+    padding-inline: 100px;
+    padding-block: 50px;
   }
   #contact {
     display: -webkit-box;
@@ -69,10 +81,58 @@
             align-items: center;
     padding-top: 1rem;
     padding: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  #contact #my-form {
+    width: 60%;
+  }
+  #wrapper {
+    width: 100vw;
+  }
+  #slider-wrap {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+  }
+  #slider-wrap ul#slider {
+    width: 100vw;
+    height: 70vh;
+    list-style: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  #slider-wrap ul#slider li {
+    float: left;
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+  }
+  #slider-wrap ul#slider li div {
+    position: absolute;
+    width: 100vw;
+  }
+  #slider-wrap ul#slider li div img {
+    width: 100vw;
+    height: 70vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .btns img {
+    height: 70%;
+  }
+  #slider-wrap.active #next {
+    right: 0px;
+  }
+  #slider-wrap.active #previous {
+    left: 0px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   header ul {
     display: none !important;
   }
@@ -251,6 +311,13 @@
   }
   #contact {
     padding: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #my-form {
     width: 30rem;
@@ -538,7 +605,6 @@ main #btn:hover {
   position: relative;
   background: #1c0522;
   background: url(./sprites/about_page.png);
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,13 +659,6 @@ main #btn:hover {
   position: relative;
   width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background: url(./sprites/mountains_behind.png) no-repeat 50vh, url(./sprites/stars.png), -webkit-gradient(linear, left top, left bottom, from(#210c42), to(#26305e));
   background: url(./sprites/mountains_behind.png) no-repeat 50vh, url(./sprites/stars.png), linear-gradient(#210c42, #26305e);
 }

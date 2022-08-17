@@ -201,7 +201,6 @@ main {
     // padding: 100px;
     background: #1c0522;
     background: url(./sprites/about_page.png);
-    background-size: cover;
     display: flex;
     flex-direction: column;
 
@@ -252,8 +251,6 @@ main {
     position: relative;
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
     background:
         url(./sprites/mountains_behind.png) no-repeat 50vh,
         url(./sprites/stars.png),
