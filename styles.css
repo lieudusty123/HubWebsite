@@ -3,6 +3,23 @@
   #text {
     font-size: 60px;
   }
+  #contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    padding-block: 5rem;
+  }
+  #my-form {
+    width: 80%;
+  }
   .section-title {
     font-size: 3rem;
   }
@@ -67,25 +84,6 @@
             align-items: center;
     padding-inline: 100px;
     padding-block: 50px;
-  }
-  #contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 1rem;
-    padding: 100px;
-    display: flex;
-    flex-direction: column;
-  }
-  #contact #my-form {
-    width: 60%;
   }
   #wrapper {
     width: 100vw;
@@ -202,13 +200,6 @@
   #work .work-image-footer {
     height: auto;
     padding: 1rem;
-  }
-  #contact {
-    padding: 0;
-    padding-block: 5rem;
-  }
-  #my-form {
-    width: 80%;
   }
   #wrapper {
     width: 100vw;

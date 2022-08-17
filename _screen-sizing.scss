@@ -10,6 +10,16 @@
         font-size: 60px;
     }
 
+    #contact {
+        @include flex-col();
+        padding: 0;
+        padding-block: 5rem;
+    }
+
+    #my-form {
+        width: 80%;
+    }
+
     .section-title {
         font-size: 3rem;
     }
@@ -44,19 +54,6 @@
         @include flex-col();
         padding-inline: 100px;
         padding-block: 50px;
-    }
-
-    #contact {
-        @include flex-col();
-        padding-top: 1rem;
-        padding: 100px;
-        display: flex;
-        flex-direction: column;
-
-        #my-form {
-            width: 60%;
-        }
-
     }
 
     #wrapper {
@@ -164,17 +161,6 @@
             height: auto;
             padding: 1rem;
         }
-    }
-
-
-
-    #contact {
-        padding: 0;
-        padding-block: 5rem;
-    }
-
-    #my-form {
-        width: 80%;
     }
 
     #wrapper {
