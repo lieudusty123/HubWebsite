@@ -127,8 +127,17 @@
   .sec .content .text-content p {
     width: 100%;
   }
+  #work {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #1f1f1f;
+    background: -webkit-gradient(linear, left top, right top, from(#353535), color-stop(40%, #252525));
+    background: linear-gradient(90deg, #353535 0%, #252525 40%);
+  }
   #work #work-title-container {
     padding-block: 2rem;
+    width: 100%;
   }
   #work #work-title-container .work-image-footer {
     height: auto;
@@ -140,6 +149,40 @@
   }
   #my-form {
     width: 80%;
+  }
+  #wrapper {
+    width: 90vw;
+  }
+  #slider-wrap {
+    width: 90vw;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+  }
+  #slider-wrap ul#slider {
+    width: 90vw;
+    height: 70vh;
+    list-style: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  #slider-wrap ul#slider li {
+    float: left;
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+  }
+  #slider-wrap ul#slider li div {
+    position: absolute;
+    width: 90vw;
+  }
+  #slider-wrap ul#slider li div img {
+    width: 90vw;
+    height: 70vh;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -196,6 +239,40 @@
   }
   #my-form {
     width: 30rem;
+  }
+  #wrapper {
+    width: 100vw;
+  }
+  #slider-wrap {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+  }
+  #slider-wrap ul#slider {
+    width: 100vw;
+    height: 70vh;
+    list-style: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  #slider-wrap ul#slider li {
+    float: left;
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+  }
+  #slider-wrap ul#slider li div {
+    position: absolute;
+    width: 100vw;
+  }
+  #slider-wrap ul#slider li div img {
+    width: 100vw;
+    height: 70vh;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -711,7 +788,6 @@ footer {
 }
 
 #wrapper {
-  max-width: 100vw;
   max-height: 70vh;
   position: relative;
   color: #fff;
@@ -719,14 +795,12 @@ footer {
 }
 
 #slider-wrap {
-  width: 100vw;
   height: 70vh;
   position: relative;
   overflow: hidden;
 }
 
 #slider-wrap ul#slider {
-  width: 100vw;
   height: 70vh;
   list-style: none;
   position: absolute;
@@ -738,17 +812,14 @@ footer {
 #slider-wrap ul#slider li {
   float: left;
   position: relative;
-  width: 100vw;
   height: 70vh;
 }
 
 #slider-wrap ul#slider li div {
   position: absolute;
-  width: 100vw;
 }
 
 #slider-wrap ul#slider li div img {
-  width: 100vw;
   height: 70vh;
   -o-object-fit: cover;
      object-fit: cover;
