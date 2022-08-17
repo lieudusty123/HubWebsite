@@ -38,15 +38,15 @@ window.addEventListener('scroll', () => {
             activeButtonsOnScroll()
 
         }
-        else if (window.scrollY < contact.offsetTop && window.scrollY > work.offsetTop) {
-            const elDistanceStars = window.pageYOffset + contact.getBoundingClientRect().top;
-            let valueStars = elDistanceStars - window.scrollY;
+        // else if (window.scrollY < contact.offsetTop && window.scrollY > work.offsetTop) {
+        //     const elDistanceStars = window.pageYOffset + contact.getBoundingClientRect().top;
+        //     let valueStars = elDistanceStars - window.scrollY;
 
-            const elDistanceMountains = window.pageYOffset + contact.getBoundingClientRect().bottom;
-            let valueMountains = elDistanceMountains - window.scrollY;
-            contact.style.backgroundPositionY = `${valueStars}px, ${valueStars / 4}px, 0px`
-            contact.style.backgroundPositionX = valueMountains >= 0 ? `50vh, -${valueMountains / 2}px, 0px` : `50vh, ${valueMountains / 2}px, 0px`
-        }
+        //     const elDistanceMountains = window.pageYOffset + contact.getBoundingClientRect().bottom;
+        //     let valueMountains = elDistanceMountains - window.scrollY;
+        //     contact.style.backgroundPositionY = `${valueStars}px, ${valueStars / 4}px, 0px`
+        //     contact.style.backgroundPositionX = valueMountains >= 0 ? `50vh, -${valueMountains / 2}px, 0px` : `50vh, ${valueMountains / 2}px, 0px`
+        // }
     }
 })
 
