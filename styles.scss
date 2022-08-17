@@ -516,7 +516,6 @@ footer {
         transition: all .3s ease;
         opacity: 0;
         filter: invert(1);
-        height: 70%;
     }
 
     #right-arrow-button {
@@ -544,7 +543,7 @@ footer {
 }
 
 #slider-wrap.active #next {
-    right: 0px;
+    // right: 0px;
 
     img {
         opacity: 1;
@@ -552,7 +551,7 @@ footer {
 }
 
 #slider-wrap.active #previous {
-    left: 0px;
+    // left: 0px;
 
     img {
         opacity: 1;
