@@ -240,11 +240,11 @@
     padding-left: 100px;
     padding-block: 50px;
   }
-  #work #work-title-container .work-image-footer {
+  #work .work-image-footer {
     padding: 1rem;
     padding-inline: 2rem;
     font-size: 21px;
-    height: 6rem;
+    height: auto;
   }
   .section-title {
     font-size: 4rem;
