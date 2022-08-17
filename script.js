@@ -6,17 +6,47 @@ let text = document.querySelector('#text')
 let btn = document.querySelector('#btn')
 let header = document.querySelector('header')
 
+
+const main = document.querySelector('main')
+const about = document.querySelector('#about')
+const work = document.querySelector('#work')
+const contact = document.querySelector('#contact')
+const footer = document.querySelector('footer')
+
+// Handles moving stars and mountains in contact section
+
+
 window.addEventListener('scroll', () => {
-    let value = window.scrollY;
-    stars.style.left = value * 0.25 + 'px'
-    moon.style.top = value * 0.85 + 'px'
-    mountains_behind.style.top = value * 0.8 + 'px'
-    mountains_front.style.top = value * 0.5 + 'px';
-    text.style.marginRight = value * 3 + 'px';
-    text.style.marginTop = value * 1 + 'px';
-    btn.style.marginTop = value * 1.8 + 'px';
-    header.style.top = value * 0.5 + 'px';
+    if (window.scrollY < about.offsetTop) {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px'
+        moon.style.top = value * 0.85 + 'px'
+        mountains_behind.style.top = value * 0.8 + 'px'
+        mountains_front.style.top = value * 0.5 + 'px';
+        text.style.marginRight = value * 3 + 'px';
+        text.style.marginTop = value * 1 + 'px';
+        btn.style.marginTop = value * 1.8 + 'px';
+        header.style.top = value * 0.5 + 'px';
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        activeButtonsOnScroll()
+
+    }
+    else if (window.scrollY < contact.offsetTop && window.scrollY > work.offsetTop) {
+        const elDistanceStars = window.pageYOffset + contact.getBoundingClientRect().top;
+        let valueStars = elDistanceStars - window.scrollY;
+
+        const elDistanceMountains = window.pageYOffset + contact.getBoundingClientRect().bottom;
+        let valueMountains = elDistanceMountains - window.scrollY;
+        contact.style.backgroundPositionY = `${valueStars}px, ${valueStars / 4}px, 0px`
+        contact.style.backgroundPositionX = valueMountains >= 0 ? `50vh, -${valueMountains / 2}px, 0px` : `50vh, ${valueMountains / 2}px, 0px`
+    }
 })
+
 
 const headerUl = header.querySelector('ul')
 const allHeaderButtons = headerUl.querySelectorAll('a')
@@ -54,14 +84,6 @@ if (window.innerWidth > 700) {
 }
 
 mybutton = document.getElementById("myBtn");
-window.onscroll = function () { scrollFunction() };
-
-
-const main = document.querySelector('main')
-const about = document.querySelector('#about')
-const work = document.querySelector('#work')
-const contact = document.querySelector('#contact')
-const footer = document.querySelector('footer')
 
 const navBtns = document.querySelectorAll('.nav-button')
 let btnArr = [...navBtns]
@@ -74,34 +96,8 @@ function activeButtonsOnScroll() {
             else { button.classList.remove('active') }
         })
     }
-    else if (window.scrollY > sectionsArr[1].offsetTop && window.scrollY < sectionsArr[2].offsetTop) {
-        btnArr.forEach(button => {
-            if (btnArr[1] == button) { button.classList.add('active') }
-            else { button.classList.remove('active') }
-        })
-    }
-    else if (window.scrollY > sectionsArr[2].offsetTop && window.scrollY < sectionsArr[3].offsetTop) {
-        btnArr.forEach(button => {
-            if (btnArr[2] == button) { button.classList.add('active') }
-            else { button.classList.remove('active') }
-        })
-    }
-    else if (window.scrollY > sectionsArr[3].offsetTop) {
-        btnArr.forEach(button => {
-            if (btnArr[3] == button) { button.classList.add('active') }
-            else { button.classList.remove('active') }
-        })
-    }
 }
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    activeButtonsOnScroll()
-}
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

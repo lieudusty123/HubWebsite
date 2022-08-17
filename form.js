@@ -29,20 +29,3 @@ async function handleSubmit(event) {
     });
 }
 form.addEventListener("submit", handleSubmit)
-
-
-
-
-// Handles moving stars and mountains in contact section
-
-const contactSection = document.querySelector('#contact')
-window.addEventListener('scroll', () => {
-
-    const elDistanceStars = window.pageYOffset + contactSection.getBoundingClientRect().top;
-    let valueStars = elDistanceStars - window.scrollY;
-
-    const elDistanceMountains = window.pageYOffset + contactSection.getBoundingClientRect().bottom;
-    let valueMountains = elDistanceMountains - window.scrollY;
-    contactSection.style.backgroundPositionY = `${valueStars}px, ${valueStars / 4}px, 0px`
-    contactSection.style.backgroundPositionX = valueMountains >= 0 ? `50vh, -${valueMountains / 2}px, 0px` : `50vh, ${valueMountains / 2}px, 0px`
-})
