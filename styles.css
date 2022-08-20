@@ -358,7 +358,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   * {
     color-scheme: light only;
     margin: 0;
