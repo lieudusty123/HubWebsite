@@ -358,11 +358,8 @@
   }
 }
 
-:root {
-  color-scheme: light only;
-}
-
 * {
+  color-scheme: light only;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
