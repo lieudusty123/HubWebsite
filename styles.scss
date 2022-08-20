@@ -1,22 +1,22 @@
 @import '_screen-sizing';
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color: white;
-    }
+// @media (prefers-color-scheme: dark) {
+//     html {
+//         color: white;
+//     }
 
-    .section-title {
-        border-bottom: 10px solid gold;
-        border-top: 10px solid gold;
-    }
+//     .section-title {
+//         border-bottom: 10px solid gold;
+//         border-top: 10px solid gold;
+//     }
 
-    .btns {
-        img {
-            filter: invert(1);
-        }
-    }
-}
+//     .btns {
+//         img {
+//             filter: invert(1);
+//         }
+//     }
+// }
 
 * {
     margin: 0;
