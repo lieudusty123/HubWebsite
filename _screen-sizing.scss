@@ -56,45 +56,6 @@
         padding-block: 50px;
     }
 
-    #wrapper {
-        width: 100vw;
-    }
-
-    #slider-wrap {
-        width: 100vw;
-        height: 70vh;
-        position: relative;
-        overflow: hidden;
-
-        ul#slider {
-            width: 100vw;
-            height: 70vh;
-            list-style: none;
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-
-            li {
-                float: left;
-                position: relative;
-                width: 100vw;
-                height: 70vh;
-
-                div {
-                    position: absolute;
-                    width: 100vw;
-
-                    img {
-                        width: 100vw;
-                        height: 70vh;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-    }
-
     .btns {
         img {
             height: 70%;
@@ -157,49 +118,7 @@
             width: 100%;
         }
 
-        .work-image-footer {
-            height: auto;
-            padding: 1rem;
-        }
-    }
 
-    #wrapper {
-        width: 100vw;
-    }
-
-    #slider-wrap {
-        width: 100vw;
-        height: 70vh;
-        position: relative;
-        overflow: hidden;
-
-        ul#slider {
-            width: 100vw;
-            height: 70vh;
-            list-style: none;
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-
-            li {
-                float: left;
-                position: relative;
-                width: 100vw;
-                height: 70vh;
-
-                div {
-                    position: absolute;
-                    width: 100vw;
-
-                    img {
-                        width: 100vw;
-                        height: 70vh;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
     }
 
     .btns {
@@ -267,10 +186,10 @@
         }
 
         .work-image-footer {
-            padding: 1rem;
+            // padding: 1rem;
             padding-inline: 2rem;
             font-size: 21px;
-            height: auto;
+            // height: auto;
         }
     }
 
@@ -287,45 +206,6 @@
 
     #my-form {
         width: 30rem;
-    }
-
-    #wrapper {
-        width: 100vw;
-    }
-
-    #slider-wrap {
-        width: 100vw;
-        height: 70vh;
-        position: relative;
-        overflow: hidden;
-
-        ul#slider {
-            width: 100vw;
-            height: 70vh;
-            list-style: none;
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-
-            li {
-                float: left;
-                position: relative;
-                width: 100vw;
-                height: 70vh;
-
-                div {
-                    position: absolute;
-                    width: 100vw;
-
-                    img {
-                        width: 100vw;
-                        height: 70vh;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
     }
 
     .btns {
