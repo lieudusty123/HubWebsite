@@ -391,7 +391,7 @@ footer {
 
         img {
             transition: color 1s;
-            animation: jumpToTop 1.5s infinite;
+            animation: jumpToTop 2s infinite ease-in-out;
         }
     }
 
