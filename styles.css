@@ -697,8 +697,8 @@ footer {
 #myBtn:hover img {
   -webkit-transition: color 1s;
   transition: color 1s;
-  -webkit-animation: jumpToTop 1.5s infinite;
-          animation: jumpToTop 1.5s infinite;
+  -webkit-animation: jumpToTop 2s infinite ease-in-out;
+          animation: jumpToTop 2s infinite ease-in-out;
 }
 
 @-webkit-keyframes jumpToTop {
