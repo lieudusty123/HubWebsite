@@ -416,6 +416,7 @@ main #text {
 
 main #btn {
   text-decoration: none;
+  position: fixed;
   display: inline-block;
   padding: 8px 30px;
   border-radius: 40px;
@@ -426,7 +427,7 @@ main #btn {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   overflow: hidden;
-  z-index: 9;
+  z-index: 0;
   -webkit-transition: .2s transform ease-in-out;
   transition: .2s transform ease-in-out;
   will-change: transform;
@@ -547,6 +548,7 @@ main #btn:hover {
   height: auto;
   background-image: url(./sprites/Scene-7.jpg);
   background-size: cover;
+  z-index: 10;
 }
 
 #contact::before {
@@ -568,7 +570,6 @@ main #btn:hover {
   margin-top: 2rem;
   border-radius: 20px;
   min-height: auto;
-  z-index: 10;
   padding-inline: 2rem;
   padding-block: 1rem;
 }
@@ -772,6 +773,7 @@ footer {
   position: relative;
   color: #fff;
   text-shadow: rgba(0, 0, 0, 0.1) 2px 2px 0px;
+  z-index: 10;
 }
 
 #slider-wrap {

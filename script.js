@@ -15,38 +15,28 @@ const footer = document.querySelector('footer')
 
 // Handles moving stars and mountains in contact section
 
-
+btn.style.display = 'inline-block'
 window.addEventListener('scroll', () => {
     window.requestAnimationFrame(handleScroll)
     function handleScroll() {
         if (window.scrollY < about.offsetTop) {
+            btn.style.display = 'inline-block'
             let value = window.scrollY;
             stars.style.left = value * 0.25 + 'px'
             moon.style.top = value * 0.85 + 'px'
             mountains_behind.style.top = value * 0.8 + 'px'
-            mountains_front.style.top = value * 0.5 + 'px';
             text.style.marginRight = value * 3 + 'px';
-            text.style.marginTop = value * 1 + 'px';
-            btn.style.marginTop = value * 1.8 + 'px';
-            header.style.top = value * 0.5 + 'px';
-
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
             }
             activeButtonsOnScroll()
-
         }
-        // else if (window.scrollY < contact.offsetTop && window.scrollY > work.offsetTop) {
-        //     const elDistanceStars = window.pageYOffset + contact.getBoundingClientRect().top;
-        //     let valueStars = elDistanceStars - window.scrollY;
 
-        //     const elDistanceMountains = window.pageYOffset + contact.getBoundingClientRect().bottom;
-        //     let valueMountains = elDistanceMountains - window.scrollY;
-        //     contact.style.backgroundPositionY = `${valueStars}px, ${valueStars / 4}px, 0px`
-        //     contact.style.backgroundPositionX = valueMountains >= 0 ? `50vh, -${valueMountains / 2}px, 0px` : `50vh, ${valueMountains / 2}px, 0px`
-        // }
+        else if (btn.style.display != 'none') {
+            btn.style.display = 'none'
+        }
     }
 })
 
@@ -93,7 +83,7 @@ let btnArr = [...navBtns]
 let sectionsArr = [main, about, work, contact]
 
 function activeButtonsOnScroll() {
-    if (window.scrollY > 0 && window.scrollY < sectionsArr[1].offsetTop) {
+    if (window.scrollY >= 0 && window.scrollY < sectionsArr[1].offsetTop) {
         btnArr.forEach(button => {
             if (btnArr[0] == button) { button.classList.add('active') }
             else { button.classList.remove('active') }
@@ -110,3 +100,4 @@ mybutton.addEventListener('click', () => {
     topFunction()
 })
 
+activeButtonsOnScroll()
