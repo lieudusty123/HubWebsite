@@ -15,24 +15,27 @@ const footer = document.querySelector('footer')
 
 // Handles moving stars and mountains in contact section
 
-
+btn.style.display = 'inline-block'
 window.addEventListener('scroll', () => {
     window.requestAnimationFrame(handleScroll)
     function handleScroll() {
         if (window.scrollY < about.offsetTop) {
+            btn.style.display = 'inline-block'
             let value = window.scrollY;
             stars.style.left = value * 0.25 + 'px'
             moon.style.top = value * 0.85 + 'px'
             mountains_behind.style.top = value * 0.8 + 'px'
             text.style.marginRight = value * 3 + 'px';
-            btn.style.marginTop = value * 1.8 + 'px';
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
             }
             activeButtonsOnScroll()
+        }
 
+        else if (btn.style.display != 'none') {
+            btn.style.display = 'none'
         }
     }
 })
