@@ -1,6 +1,12 @@
 @import '_screen-sizing';
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
+@media (prefers-color-scheme: dark) {
+    .section-title {
+        border-bottom: 10px solid lighten(gold, 10);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
