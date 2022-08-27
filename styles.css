@@ -265,7 +265,7 @@
   width: fit-content;
   padding-right: 3rem;
   text-shadow: 9px 9px black;
-  border-bottom: 10px solid gold;
+  border-bottom: 10px solid gold !important;
   font-weight: 800;
   letter-spacing: 2px;
   color: white;
