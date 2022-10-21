@@ -55,19 +55,20 @@
         padding-inline: 100px;
         padding-block: 50px;
     }
-
-    .btns {
-        img {
-            height: 70%;
+    #work-list{
+        li{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .work-image-footer{
+                width: 100%;
+            }
+            .work-image-container{
+                width: 60%;
+                padding: 2rem 1rem 1rem 1rem;
+            }
         }
-    }
-
-    #slider-wrap.active #next {
-        right: 0px;
-    }
-
-    #slider-wrap.active #previous {
-        left: 0px;
     }
 }
 
@@ -117,31 +118,21 @@
             padding-block: 2rem;
             width: 100%;
         }
-
-
-    }
-
-    .btns {
-        img {
-            height: 40%;
+        #work-list{
+            li{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .work-image-footer{
+                    width: 100%;
+                }
+                .work-image-container{
+                    width: 100%;
+                    padding: 2rem 1rem 1rem 1rem;
+                }
+            }
         }
-    }
-
-    #slider-wrap.active #next {
-        right: -50px;
-
-        img {
-            margin-right: 2.5rem;
-        }
-    }
-
-    #slider-wrap.active #previous {
-        left: -50px;
-
-        img {
-            margin-left: 2.5rem;
-        }
-
     }
 }
 
@@ -184,12 +175,19 @@
             padding-left: 100px;
             padding-block: 50px;
         }
-
-        .work-image-footer {
-            // padding: 1rem;
-            padding-inline: 2rem;
-            font-size: 21px;
-            // height: auto;
+        #work-list{
+            li{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .work-image-footer{
+                    width: 60%;
+                }
+                .work-image-container{
+                    padding: 1rem;
+                    width: 30%;
+                }
+            }
         }
     }
 
@@ -207,19 +205,4 @@
     #my-form {
         width: 30rem;
     }
-
-    .btns {
-        img {
-            height: 70%;
-        }
-    }
-
-    #slider-wrap.active #next {
-        right: 0px;
-    }
-
-    #slider-wrap.active #previous {
-        left: 0px;
-    }
-
 }
