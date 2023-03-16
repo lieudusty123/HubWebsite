@@ -68,6 +68,10 @@ const myTags = [
   "ES6",
   "SASS/SCSS",
   "ContextAPI",
+  "NodeJS",
+  "Express",
+  "OOP",
+  "MongoDB",
 ];
 if (window.innerWidth > 700) {
   var tagCloud = TagCloud(".content", myTags, {

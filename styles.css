@@ -282,7 +282,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .section-title {
@@ -374,13 +374,13 @@ header ul li a {
   text-align: center;
   width: 100%;
   border-radius: 20px;
-  -webkit-transition: background .4s;
-  transition: background .4s;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
 }
 
 header ul li a:hover, header ul li a.active {
-  -webkit-transition: background .4s;
-  transition: background .4s;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
   background: white;
   color: #2b1055;
   font-weight: 700;
@@ -404,7 +404,7 @@ main {
 }
 
 main::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -454,15 +454,17 @@ main #btn {
           transform: translateY(100px);
   overflow: hidden;
   z-index: 0;
-  -webkit-transition: .2s transform ease-in-out;
-  transition: .2s transform ease-in-out;
+  -webkit-transition: 0.2s -webkit-transform ease-in-out;
+  transition: 0.2s -webkit-transform ease-in-out;
+  transition: 0.2s transform ease-in-out;
+  transition: 0.2s transform ease-in-out, 0.2s -webkit-transform ease-in-out;
   will-change: transform;
 }
 
 main #btn::after {
   background-color: #3a1675;
   border-radius: 3rem;
-  content: '';
+  content: "";
   display: block;
   height: 15vh;
   width: 15vw;
@@ -473,8 +475,10 @@ main #btn::after {
           transform: translate(-100%, 0) rotate(10deg);
   -webkit-transform-origin: top left;
           transform-origin: top left;
-  -webkit-transition: .4s transform ease-out;
-  transition: .4s transform ease-out;
+  -webkit-transition: 0.4s -webkit-transform ease-out;
+  transition: 0.4s -webkit-transform ease-out;
+  transition: 0.4s transform ease-out;
+  transition: 0.4s transform ease-out, 0.4s -webkit-transform ease-out;
   will-change: transform;
   z-index: -1;
 }
@@ -485,8 +489,8 @@ main #btn:hover::after {
 }
 
 main #btn:hover {
-  -webkit-animation: fillButton .4s;
-          animation: fillButton .4s;
+  -webkit-animation: fillButton 0.4s;
+          animation: fillButton 0.4s;
   color: white;
   background-color: #3a1675;
   will-change: transform;
@@ -529,14 +533,15 @@ main #btn:hover {
 
 .sec .content .text-content {
   border-left: 2px solid white;
-  -webkit-backdrop-filter: blur(200px) opacity(20%);
-          backdrop-filter: blur(200px) opacity(20%);
+  -webkit-backdrop-filter: blur(400px) opacity(20%);
+          backdrop-filter: blur(400px) opacity(20%);
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
 }
 
 .sec .content .text-content #highlight-text {
   font-weight: 800;
+  font-size: 1.2rem;
   border-bottom: 2px solid white;
 }
 
@@ -560,7 +565,7 @@ main #btn:hover {
 }
 
 .sec .tagcloud {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 650;
   color: white;
@@ -578,7 +583,7 @@ main #btn:hover {
 }
 
 #contact::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -612,7 +617,7 @@ main #btn:hover {
 
 #contact #my-form h4 {
   font-size: 1.4rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 #contact #my-form input {
@@ -632,7 +637,7 @@ main #btn:hover {
 #contact #my-form #messageInput {
   height: 6rem;
   width: 100%;
-  padding-block: .5rem;
+  padding-block: 0.5rem;
   padding-inline: 1rem;
   margin-bottom: 1rem;
   resize: none;
@@ -653,21 +658,21 @@ main #btn:hover {
   border: none;
   font-size: 1.2rem;
   background-color: rgba(255, 219, 12, 0.973);
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #contact #my-form #my-form-button:hover {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   background-color: rgba(242, 206, 0, 0.973);
   letter-spacing: 1px;
   cursor: pointer;
 }
 
 #contact #my-form #my-form-button:active {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   background-color: rgba(216, 184, 0, 0.973);
   -webkit-box-shadow: 7px 7px 0px 0px black;
           box-shadow: 7px 7px 0px 0px black;
@@ -705,8 +710,8 @@ footer {
   text-align: center;
   border-radius: 50%;
   font-size: 18px;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #myBtn img {
@@ -807,7 +812,7 @@ footer {
 
 #work #work-list li .work-image-text-title {
   color: gold;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   font-weight: 600;
   border-bottom: 2px solid white;
 }
@@ -822,17 +827,17 @@ footer {
 #work #work-list li .work-image-container a img {
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 #work #work-list li .work-image-container a img:hover {
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
