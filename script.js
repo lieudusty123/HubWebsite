@@ -70,8 +70,9 @@ const myTags = [
   "ContextAPI",
   "NodeJS",
   "Express",
-  "OOP",
   "MongoDB",
+  "Tailwind",
+  "NextJS",
 ];
 if (window.innerWidth > 700) {
   var tagCloud = TagCloud(".content", myTags, {
